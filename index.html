@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="title" content="VisDocAgentBench: Benchmarking Agents for Visually Rich Document Retrieval">
+  <meta name="description" content="A closed-corpus benchmark for static and agentic retrieval over visually rich document pages.">
+  <meta name="keywords" content="visual document retrieval, agentic search, multimodal retrieval, benchmark, document intelligence">
+  <meta name="author" content="Lexiang Hu, Yanzhao Zhang, Mingxin Li, Dingkun Long, Yikang Li, Fuwei Zhang, Yisen Wang, Zhouchen Lin">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="VisDocAgentBench">
+  <meta property="og:title" content="VisDocAgentBench">
+  <meta property="og:description" content="Benchmarking agents for visually rich document retrieval.">
+  <meta property="og:url" content="https://hulx2002.github.io/VisDocAgentBench">
+  <meta property="og:image" content="https://hulx2002.github.io/VisDocAgentBench/static/images/social_preview.png">
+  <meta property="article:published_time" content="2026-08-19T00:00:00+08:00">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="VisDocAgentBench">
+  <meta name="twitter:description" content="Benchmarking agents for visually rich document retrieval.">
+  <meta name="twitter:image" content="https://hulx2002.github.io/VisDocAgentBench/static/images/social_preview.png">
+  <meta name="citation_title" content="VisDocAgentBench: Benchmarking Agents for Visually Rich Document Retrieval">
+  <meta name="citation_author" content="Hu, Lexiang">
+  <meta name="citation_author" content="Zhang, Yanzhao">
+  <meta name="citation_author" content="Li, Mingxin">
+  <meta name="citation_author" content="Long, Dingkun">
+  <meta name="citation_author" content="Li, Yikang">
+  <meta name="citation_author" content="Zhang, Fuwei">
+  <meta name="citation_author" content="Wang, Yisen">
+  <meta name="citation_author" content="Lin, Zhouchen">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_arxiv_id" content="2608.17889">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2608.17889">
+  <meta name="theme-color" content="#234e52">
+  <title>VisDocAgentBench</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/site.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "VisDocAgentBench: Benchmarking Agents for Visually Rich Document Retrieval",
+    "author": [
+      {"@type": "Person", "name": "Lexiang Hu"},
+      {"@type": "Person", "name": "Yanzhao Zhang"},
+      {"@type": "Person", "name": "Mingxin Li"},
+      {"@type": "Person", "name": "Dingkun Long"},
+      {"@type": "Person", "name": "Yikang Li"},
+      {"@type": "Person", "name": "Fuwei Zhang"},
+      {"@type": "Person", "name": "Yisen Wang"},
+      {"@type": "Person", "name": "Zhouchen Lin"}
+    ],
+    "datePublished": "2026-08-19",
+    "url": "https://hulx2002.github.io/VisDocAgentBench",
+    "sameAs": "https://arxiv.org/pdf/2608.17889",
+    "image": "https://hulx2002.github.io/VisDocAgentBench/static/images/social_preview.png",
+    "isAccessibleForFree": true
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="publication-header">
+    <div class="container is-max-desktop">
+      <h1>VisDocAgentBench</h1>
+      <p class="paper-subtitle">Benchmarking Agents for Visually Rich Document Retrieval</p>
+
+      <div class="authors" aria-label="Authors">
+        <span>Lexiang Hu<sup>1,†</sup></span>
+        <span>Yanzhao Zhang</span>
+        <span>Mingxin Li</span>
+        <span>Dingkun Long</span>
+        <span>Yikang Li<sup>1</sup></span>
+        <span>Fuwei Zhang</span>
+        <span>Yisen Wang<sup>1</sup></span>
+        <span>Zhouchen Lin<sup>1,*</sup></span>
+      </div>
+      <p class="affiliation"><sup>1</sup>State Key Lab of General AI, School of Intelligence Science and Technology, Peking University</p>
+      <p class="author-note"><sup>†</sup>Work done during internship at Token Foundry, Alibaba Group. <sup>*</sup>Corresponding author.</p>
+
+      <nav class="publication-links" aria-label="Project links">
+        <a class="button-link" href="https://arxiv.org/pdf/2608.17889" target="_blank" rel="noopener">
+          <i class="fas fa-file-pdf" aria-hidden="true"></i><span>Paper</span>
+        </a>
+        <a class="button-link" href="https://github.com/hulx2002/VisDocAgentBench" target="_blank" rel="noopener">
+          <i class="fab fa-github" aria-hidden="true"></i><span>Code</span>
+        </a>
+        <a class="button-link" href="https://huggingface.co/datasets/hulx2002/VisDocAgentBench" target="_blank" rel="noopener">
+          <i class="fas fa-database" aria-hidden="true"></i><span>Dataset</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="teaser-section" aria-labelledby="teaser-title">
+      <div class="container is-max-widescreen">
+        <h2 id="teaser-title" class="visually-hidden">Benchmark overview</h2>
+        <figure class="figure-frame hero-figure">
+          <img src="static/images/benchmark_overview.png" alt="Overview of VisDocAgentBench evidence levels and static versus agentic retrieval" width="1624" height="965">
+          <figcaption>VisDocAgentBench tests direct, one-bridge, and two-bridge retrieval with both static and agentic search over the same closed corpus.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="stats-band" aria-label="Benchmark statistics">
+      <div class="container is-max-desktop stats-grid">
+        <div><strong>2,375</strong><span>Rendered pages</span></div>
+        <div><strong>100</strong><span>Documents</span></div>
+        <div><strong>120</strong><span>Unique-target queries</span></div>
+        <div><strong>40 × 3</strong><span>Evidence structures</span></div>
+      </div>
+    </section>
+
+    <section class="section-block abstract-section" aria-labelledby="abstract-title">
+      <div class="container is-max-desktop">
+        <h2 id="abstract-title" class="standalone-heading">Abstract</h2>
+        <p class="abstract-text">Visually rich documents encode relevance through language, layout, structured visual elements, and corpus context, yet retrieval is typically evaluated by one-shot query–page matching. Agentic-search benchmarks usually score downstream question answering or report generation, leaving document ranking under iterative evidence acquisition underexplored. We introduce VisDocAgentBench, a closed-corpus benchmark comparing static and agentic retrieval under a shared ranked-output contract. It contains 2,375 pages from 100 documents and 120 unique-target queries balanced across direct, one-bridge, and two-bridge evidence structures. Relation-preserving construction yields semantic, relational, and visual queries, followed by full-document review and hard-negative validation. A strong late-interaction visual retriever reaches 97.50% Recall@1 on direct items but 2.50% on two-bridge items, exposing the limits of query–target matching when relevance depends on corpus context. Agents recover much of this loss, but planner choice and retrieval representation remain decisive. Every planner performs better with visual retrieval, whose best R@1 reaches 67.50% versus 37.50% for OCR-text. Ablations identify iterative search and page inspection as consequential capabilities, and providing the complete support context improves ranking on both routes. Trace analysis localizes the remaining losses to target discovery, candidate examination, and evidence-role integration. These findings motivate retrieval agents that combine modality-preserving discovery with evidence-directed verification.</p>
+      </div>
+    </section>
+
+    <section class="section-block" aria-labelledby="why-title">
+      <div class="container is-max-desktop">
+        <div class="section-heading">
+          <p class="section-index">01</p>
+          <div>
+            <h2 id="why-title">Why agentic document retrieval?</h2>
+            <p>Relevance in visually rich documents can depend on language, layout, structured visual elements, and evidence elsewhere in the corpus.</p>
+          </div>
+        </div>
+        <div class="insight-grid">
+          <article>
+            <h3>Shared retrieval contract</h3>
+            <p>Every system receives the same query and corpus and returns a ranked top-10 page list, making static and interactive retrieval directly comparable.</p>
+          </article>
+          <article>
+            <h3>Evidence-conditioned relevance</h3>
+            <p>One- and two-bridge queries require corpus evidence to interpret which visual endpoint satisfies the request.</p>
+          </article>
+          <article>
+            <h3>Auditable interaction</h3>
+            <p>Opaque handles, declared tools, and a fixed action budget expose how an agent searches, inspects, verifies, and ranks pages.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block construction-section" aria-labelledby="construction-title">
+      <div class="container is-max-widescreen">
+        <div class="section-heading constrained-heading">
+          <p class="section-index">02</p>
+          <div>
+            <h2 id="construction-title">Relation-preserving construction</h2>
+            <p>Candidate evidence relations are aligned across pages, composed into paths, independently reviewed, and validated against hard negatives.</p>
+          </div>
+        </div>
+        <figure class="figure-frame">
+          <img src="static/images/benchmark_construction.png" alt="Four-stage VisDocAgentBench construction pipeline" width="1574" height="902" loading="lazy">
+          <figcaption>The benchmark construction pipeline connects observable descriptors through directed relations and cross-page semantic bridges before query authoring and audit.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section-block results-section" aria-labelledby="results-title">
+      <div class="container is-max-widescreen">
+        <div class="section-heading constrained-heading">
+          <p class="section-index">03</p>
+          <div>
+            <h2 id="results-title">Main results</h2>
+            <p>Static retrievers and tool-using agents are compared under Visual and OCR-Text retrieval.</p>
+          </div>
+        </div>
+        <div class="results-table-wrap" role="region" aria-label="Overall retrieval results" tabindex="0">
+          <table class="results-table">
+            <caption>Overall retrieval results on 120 queries (%). Invalid completed episodes receive zero. Bold marks the best value in each route and metric.</caption>
+            <thead>
+              <tr>
+                <th rowspan="2" scope="col">Retriever / Planner</th>
+                <th colspan="5" scope="colgroup">Visual</th>
+                <th colspan="5" scope="colgroup" class="route-divider">OCR-Text</th>
+              </tr>
+              <tr>
+                <th scope="col">R@1</th>
+                <th scope="col">R@3</th>
+                <th scope="col">R@5</th>
+                <th scope="col">R@10</th>
+                <th scope="col">MRR@10</th>
+                <th scope="col" class="route-divider">R@1</th>
+                <th scope="col">R@3</th>
+                <th scope="col">R@5</th>
+                <th scope="col">R@10</th>
+                <th scope="col">MRR@10</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-group"><th colspan="11" scope="rowgroup">Static Retrievers</th></tr>
+              <tr>
+                <th scope="row">Qwen3 Embedding</th>
+                <td>20.83</td><td>30.00</td><td>34.17</td><td>45.00</td><td>27.34</td>
+                <td class="route-divider">1.67</td><td>5.83</td><td>13.33</td><td>19.17</td><td>6.01</td>
+              </tr>
+              <tr>
+                <th scope="row">BM25</th>
+                <td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td>
+                <td class="route-divider">6.67</td><td>15.00</td><td>19.17</td><td>30.00</td><td>12.46</td>
+              </tr>
+              <tr>
+                <th scope="row">BM25 + dense RRF</th>
+                <td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td>
+                <td class="route-divider">5.00</td><td>14.17</td><td>19.17</td><td>26.67</td><td>11.41</td>
+              </tr>
+              <tr>
+                <th scope="row">Nemotron ColEmbed</th>
+                <td>40.00</td><td>52.50</td><td>65.00</td><td>70.00</td><td>48.86</td>
+                <td class="route-divider">&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td>
+              </tr>
+              <tr class="table-group"><th colspan="11" scope="rowgroup">Tool-Using Agents: Closed-Source Planners</th></tr>
+              <tr>
+                <th scope="row">GPT-5.5</th>
+                <td>60.00</td><td>61.67</td><td>64.17</td><td>69.17</td><td>61.87</td>
+                <td class="route-divider">26.67</td><td>27.50</td><td>27.50</td><td>28.33</td><td>27.19</td>
+              </tr>
+              <tr>
+                <th scope="row">GPT-5.6-luna</th>
+                <td>43.33</td><td>47.50</td><td>50.83</td><td>57.50</td><td>46.75</td>
+                <td class="route-divider">12.50</td><td>14.17</td><td>18.33</td><td>21.67</td><td>14.77</td>
+              </tr>
+              <tr>
+                <th scope="row">GPT-5.6-terra</th>
+                <td>54.17</td><td>57.50</td><td>58.33</td><td>64.17</td><td>56.65</td>
+                <td class="route-divider">26.67</td><td>28.33</td><td>28.33</td><td>33.33</td><td>27.92</td>
+              </tr>
+              <tr>
+                <th scope="row">GPT-5.6-sol</th>
+                <td>61.67</td><td>65.00</td><td>65.83</td><td>68.33</td><td>63.58</td>
+                <td class="route-divider">36.67</td><td>38.33</td><td>40.83</td><td>44.17</td><td>38.40</td>
+              </tr>
+              <tr>
+                <th scope="row">Claude Opus 4.8</th>
+                <td>47.50</td><td>54.17</td><td>59.17</td><td>68.33</td><td>52.39</td>
+                <td class="route-divider">24.17</td><td>27.50</td><td>30.00</td><td>40.83</td><td>27.38</td>
+              </tr>
+              <tr>
+                <th scope="row">Claude Fable 5</th>
+                <td>62.50</td><td>67.50</td><td><strong>71.67</strong></td><td><strong>80.00</strong></td><td>66.69</td>
+                <td class="route-divider">35.00</td><td><strong>41.67</strong></td><td>43.33</td><td><strong>52.50</strong></td><td>39.34</td>
+              </tr>
+              <tr>
+                <th scope="row">Claude Sonnet 5</th>
+                <td>30.00</td><td>40.83</td><td>46.67</td><td>55.83</td><td>37.33</td>
+                <td class="route-divider">17.50</td><td>20.00</td><td>22.50</td><td>23.33</td><td>19.12</td>
+              </tr>
+              <tr>
+                <th scope="row">Claude Opus 5</th>
+                <td><strong>67.50</strong></td><td><strong>70.83</strong></td><td><strong>71.67</strong></td><td>75.00</td><td><strong>69.43</strong></td>
+                <td class="route-divider"><strong>37.50</strong></td><td><strong>41.67</strong></td><td><strong>45.00</strong></td><td>49.17</td><td><strong>40.57</strong></td>
+              </tr>
+              <tr class="table-group"><th colspan="11" scope="rowgroup">Tool-Using Agents: Open-Weight Planner</th></tr>
+              <tr>
+                <th scope="row">Qwen3.5 (thinking)</th>
+                <td>27.50</td><td>33.33</td><td>35.00</td><td>40.00</td><td>31.20</td>
+                <td class="route-divider">8.33</td><td>9.17</td><td>10.00</td><td>15.83</td><td>9.70</td>
+              </tr>
+              <tr>
+                <th scope="row">Qwen3.5 (no thinking)</th>
+                <td>19.17</td><td>23.33</td><td>30.00</td><td>38.33</td><td>23.55</td>
+                <td class="route-divider">1.67</td><td>4.17</td><td>7.50</td><td>10.00</td><td>3.83</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block citation-section" id="bibtex" aria-labelledby="bibtex-title">
+      <div class="container is-max-desktop">
+        <div class="bibtex-header">
+          <h2 id="bibtex-title">BibTeX</h2>
+          <button id="copy-bibtex" type="button" aria-label="Copy BibTeX citation">
+            <i class="fas fa-copy" aria-hidden="true"></i><span>Copy</span>
+          </button>
+        </div>
+        <pre><code id="bibtex-code">@article{hu2026visdocagentbench,
+  title={VisDocAgentBench: Benchmarking Agents for Visually Rich Document Retrieval},
+  author={Hu, Lexiang and Zhang, Yanzhao and Li, Mingxin and Long, Dingkun and Li, Yikang and Zhang, Fuwei and Wang, Yisen and Lin, Zhouchen},
+  journal={arXiv preprint arXiv:2608.17889},
+  year={2026}
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container is-max-desktop">
+      <p>Built with the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener">Academic Project Page Template</a>, adapted from the <a href="https://nerfies.github.io" target="_blank" rel="noopener">Nerfies</a> project page.</p>
+      <p>Website source is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>.</p>
+    </div>
+  </footer>
+
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/site.js"></script>
+</body>
+</html>
