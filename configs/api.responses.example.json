@@ -1,0 +1,11 @@
+{
+  "api_key": "",
+  "base_url": "https://your-openai-compatible-host/v1",
+  "model": "your-model-name",
+  "api_format": "responses",
+  "reasoning_effort": "medium",
+  "temperature": 0.0,
+  "timeout": 120.0,
+  "max_retries": 2,
+  "retry_backoff": 2.0
+}

@@ -1,0 +1,7 @@
+numpy==2.3.5
+Pillow==12.1.0
+PyMuPDF==1.26.7
+huggingface_hub==1.11.0
+requests==2.34.2
+safetensors==0.7.0
+tokenizers==0.23.1

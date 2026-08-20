@@ -1,0 +1,9 @@
+vllm==0.19.1
+torch==2.10.0
+transformers==5.5.4
+tokenizers==0.22.2
+huggingface_hub==1.11.0
+safetensors==0.7.0
+numpy==2.2.6
+Pillow==12.2.0
+requests==2.33.1

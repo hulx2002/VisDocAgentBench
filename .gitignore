@@ -1,0 +1,28 @@
+# Credentials and local API configuration
+configs/api.json
+.env
+.env.*
+*.pem
+*.key
+
+# Downloaded data and models
+/data
+/models
+
+# Generated caches, outputs, and logs
+/outputs/
+*.log
+*.pid
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# Environments and editors
+.venv/
+venv/
+.idea/
+.vscode/
+.DS_Store

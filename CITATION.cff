@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use VisDocAgentBench, please cite the paper below."
+title: "VisDocAgentBench: Benchmarking Agents for Visually Rich Document Retrieval"
+type: article
+authors:
+  - family-names: Hu
+    given-names: Lexiang
+  - family-names: Zhang
+    given-names: Yanzhao
+  - family-names: Li
+    given-names: Mingxin
+  - family-names: Long
+    given-names: Dingkun
+  - family-names: Li
+    given-names: Yikang
+  - family-names: Zhang
+    given-names: Fuwei
+  - family-names: Wang
+    given-names: Yisen
+  - family-names: Lin
+    given-names: Zhouchen
+date-released: 2026-08-19
+license: Apache-2.0
+repository-code: "https://github.com/hulx2002/VisDocAgentBench"
+url: "https://arxiv.org/pdf/2608.17889"
+identifiers:
+  - type: url
+    value: "https://arxiv.org/pdf/2608.17889"
+    description: arXiv paper

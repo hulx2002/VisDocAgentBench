@@ -1,0 +1,13 @@
+{
+  "api_key": "EMPTY",
+  "base_url": "http://127.0.0.1:8010/v1",
+  "model": "Qwen3.5-397B-A17B",
+  "api_format": "chat_completions",
+  "temperature": null,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  },
+  "timeout": 1200.0,
+  "max_retries": 2,
+  "retry_backoff": 2.0
+}

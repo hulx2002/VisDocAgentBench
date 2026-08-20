@@ -1,0 +1,18 @@
+{
+  "api_key": "",
+  "base_url": "https://your-anthropic-compatible-host/v1",
+  "model": "your-model-name",
+  "api_format": "anthropic_messages",
+  "auth_mode": "x-api-key",
+  "anthropic_version": "2023-06-01",
+  "thinking": {
+    "type": "adaptive"
+  },
+  "output_config": {
+    "effort": "medium"
+  },
+  "temperature": null,
+  "timeout": 180.0,
+  "max_retries": 2,
+  "retry_backoff": 2.0
+}
